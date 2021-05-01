@@ -8,15 +8,13 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify-es').default;
 
 
-
-var gulp = require('gulp');
-var ghPages = require('gulp-gh-pages');
-
-gulp.task('deploy', function () {
-	return gulp.src('./**/*')
+	var gulp = require('gulp');
+	var ghPages = require('gulp-gh-pages');
+	
+	gulp.task('deploy', function() {
+	  return gulp.src('./**/*')
 		.pipe(ghPages());
-});
-
+	});
 
 gulp.task('browser-sync', function () {
 	browserSync.init({
